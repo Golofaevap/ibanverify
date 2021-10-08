@@ -22,7 +22,7 @@ puppeteer.use(AdblockerPlugin());
 puppeteer.use(StealthPlugin());
 
 async function checkIBAN(__iban, atempt) {
-    const opts = { headless: false, userDataDirPath: "./session", width: 1280, height: 720 };
+    const opts = { headless: true, userDataDirPath: "./session", width: 1280, height: 720 };
     const browser = await getBrowser(opts);
     try {
         const page = await newPage(browser, opts);
